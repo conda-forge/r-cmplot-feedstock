@@ -1,4 +1,4 @@
-{% set version = '3.6.0' %}
+{% set version = "3.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/CMplot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/CMplot/CMplot_{{ version }}.tar.gz
-  sha256: bfcc80e50b7569193e7164f7cbd5ba12832a06cd4636eabfbf204046f55c9ddf
+  sha256: 41022a3a3688eefba5590e0620e86e6c5dd16df96cfb639d088735fd8a2cc08f
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,20 +36,12 @@ test:
 about:
   home: https://github.com/YinLiLin/R-CMplot
   license: GPL-2.0-only
-  summary: 'Manhattan plot, a type of scatter plot, was widely used to display the association
-    results. However, it is usually time-consuming and laborious for a non-specialist
-    user to write scripts and adjust parameters of an elaborate plot. Moreover, the
-    ever-growing traits measured have necessitated the integration of results from different
-    Genome-wide association study researches. Circle Manhattan Plot is the first open
-    R package that can lay out. Genome-wide association study P-value results in both
-    traditional rectangular patterns, QQ-plot and novel circular ones. United in only
-    one bull''s eye style plot, association results from multiple traits can be compared
-    interactively, thereby to reveal both similarities and differences between signals.
-    Additional functions include: highlight signals, a group of SNPs, chromosome visualization
-    and candidate genes around SNPs.'
+  summary: "Manhattan plot, a type of scatter plot, was widely used to display the association results. However, it is usually time-consuming and laborious for a non-specialist user to write scripts and adjust parameters of an elaborate plot. Moreover, the ever-growing traits measured have necessitated the integration of\
+    \ results from different Genome-wide association study researches. Circle Manhattan Plot is the first open R package that can lay out. Genome-wide association study P-value results in both traditional rectangular patterns, QQ-plot and novel circular ones. United in only one bull's eye style plot, association results\
+    \ from multiple traits can be compared interactively, thereby to reveal both similarities and differences between signals. Additional functions include: highlight signals, a group of SNPs, chromosome visualization and candidate genes around SNPs."
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
