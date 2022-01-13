@@ -1,4 +1,4 @@
-{% set version = "3.7.0" %}
+{% set version = "4.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/CMplot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/CMplot/CMplot_{{ version }}.tar.gz
-  sha256: d0e979cd781e615d278935f91ee113eeaa7aa5883ec2c554798dabdc2ee2dc34
+  sha256: 01b1f30fcac2a5749251c8f2f6e00d8593a2e8ce1d31b3f3b49620067c39d077
 
 build:
   merge_build_host: true  # [win]
